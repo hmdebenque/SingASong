@@ -1,5 +1,28 @@
+[tools]
+# Gradle 4.4 requires the legacy JDK. Mise exports JAVA_HOME for task commands.
+java = "temurin-8.0.504+1"
+# This plugin exports ANDROID_HOME and ANDROID_SDK_ROOT for its managed SDK.
+android-sdk = "13.0"
+
+[tasks."setup:app"]
+description = "Install the Android SDK platform and build tools used by the app"
+# SDK command-line tools need Java 17; this override does not affect Gradle.
+tools.java = "temurin-17.0.21+9"
+raw = true
+run = '''
+set -eu
+if test -f "$ANDROID_HOME/platforms/android-27/android.jar" && test -f "$ANDROID_HOME/build-tools/27.0.3/aapt"; then
+    exit 0
+fi
+sdkmanager --sdk_root="$ANDROID_HOME" "platforms;android-27" "build-tools;27.0.3"
+# sdkmanager can return success after licenses are declined; verify installation.
+test -f "$ANDROID_HOME/platforms/android-27/android.jar"
+test -f "$ANDROID_HOME/build-tools/27.0.3/aapt"
+'''
+
 [tasks."build:app"]
 description = "Build the Android debug APK"
+depends = ["setup:app"]
 dir = "{{config_root}}/app"
 run = "./gradlew --no-daemon assembleDebug"
 

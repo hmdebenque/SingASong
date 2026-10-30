@@ -1,5 +1,9 @@
 # Knowledge change log
 
+## 2026-10-30 — Mise Android environment provisioning
+
+Following maintainer direction, pinned Temurin Java 8 for Gradle, Android SDK command-line tools 13.0, and a task-specific Temurin Java 17 for SDK provisioning. Added `setup:app` as a dependency of `build:app`, with idempotent SDK platform 27 / Build Tools 27.0.3 installation and post-install verification. SDK license acceptance remains interactive. Installed all pinned tools and verified Gradle 4.4 starts on the managed Java 8; SDK setup reached its license prompt. This does not complete SAS-006/007.
+
 ## 2026-10-30 — Android Gradle ownership and mise entry point
 
 Following explicit maintainer direction, moved the wrapper and Gradle configuration under `app/`, combined the root buildscript with the existing application module configuration, and made the Android application a single Gradle project without moving source/resources. Added root mise tasks `build:app` and `check:docs`; recorded legacy build prerequisites. Mise task validation and dry run passed; the actual task downloaded Gradle 4.4 and failed because it cannot recognize Java 21, before project evaluation. No APK was generated. This is a build-layout change, not the SAS-006 modern Android foundation or completion of SAS-007 delivery tooling.

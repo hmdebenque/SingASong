@@ -4,7 +4,7 @@ An Android Kotlin app for choir repertoire: find music, read comfortably, practi
 
 ## Project status
 
-This checkout preserves the full history and legacy Android application from [frenchfrie/SingASong](https://github.com/frenchfrie/SingASong). Android source, Gradle configuration and wrapper live together in `app/`. Build from the repository root with `mise run build:app`; legacy toolchain compatibility and runtime remain unaudited. The choir reboot has planning and repository checks only: no new app foundation, website, backend or infrastructure is implemented. A Play developer account and app already exist; their configuration has not been audited.
+This checkout preserves the full history and legacy Android application from [frenchfrie/SingASong](https://github.com/frenchfrie/SingASong). Android source, Gradle configuration and wrapper live together in `app/`. Build from the repository root with `mise run build:app`; mise provisions the pinned JDKs and Android SDK packages, with interactive SDK license acceptance on first setup. Full legacy application compatibility and runtime remain unaudited. The choir reboot has planning and repository checks only: no new app foundation, website, backend or infrastructure is implemented. A Play developer account and app already exist; their configuration has not been audited.
 
 Repository integration and the tracker-access blocker are recorded in the [SAS-001 integration report](docs/project/sas-001-integration.md). The [local backlog](docs/project/backlog.md) remains the task-status authority until the SAS tracker is configured.
 
@@ -33,4 +33,4 @@ The Android application belongs in `app/`, including future reboot work. The oth
 
 ## Current validation
 
-Run `mise run build:app` to assemble the Android debug APK; see [Android prerequisites](app/README.md). Run `mise run check:docs` (or `python3 scripts/check_docs.py`) to check local Markdown file links and basic whitespace. This needs only Python 3 and does not install tools or contact external sites. Reboot application checks will be added with each component; legacy build verification is deferred to SAS-002/006; see the [development guide](docs/guides/development.md).
+Run `mise run build:app` to assemble the Android debug APK; see [Android prerequisites](app/README.md). Run `mise run check:docs` (or `python3 scripts/check_docs.py`) to check local Markdown file links and basic whitespace. The direct Python documentation check needs only Python 3 and does not install tools or contact external sites. Reboot application checks will be added with each component; legacy build verification is deferred to SAS-002/006; see the [development guide](docs/guides/development.md).

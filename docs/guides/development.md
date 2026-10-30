@@ -1,6 +1,6 @@
 # Development and validation
 
-The reboot provides documentation and a Python documentation check. The preserved legacy Android application, Gradle configuration and wrapper are all in `app/`; `mise run build:app` invokes its debug APK build. The build task was attempted but Gradle 4.4 rejected the installed Java 21 runtime before project evaluation; no APK was produced. SAS-002/006 must audit compatibility before selecting a new build foundation. A root `mise.toml` supplies `build:app` and `check:docs` tasks. It does not install or pin a replacement toolchain; the [Android README](../../app/README.md) lists legacy JDK/SDK prerequisites. No Node manager, backend compiler or cloud tool is selected.
+The reboot provides documentation and a Python documentation check. Android source, Gradle configuration and wrapper live in `app/`. The root `mise.toml` pins Java 8 for the legacy Gradle build, Android command-line tools, and a task-specific Java 17 for SDK provisioning. `mise run build:app` installs missing tools, runs `setup:app` to install SDK platform 27 / Build Tools 27.0.3, then assembles the debug APK. First-time SDK setup prompts for license acceptance. See the [Android README](../../app/README.md) for exact commands and current validation. No Node manager, backend compiler or cloud tool is selected. SAS-002/006 still own the legacy compatibility audit and modern app foundation.
 
 Run from the repository root:
 
