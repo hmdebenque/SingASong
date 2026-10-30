@@ -1,0 +1,8 @@
+[tasks."build:app"]
+description = "Build the Android debug APK"
+dir = "{{config_root}}/app"
+run = "./gradlew --no-daemon assembleDebug"
+
+[tasks."check:docs"]
+description = "Check documentation links and whitespace"
+run = "python3 scripts/check_docs.py"

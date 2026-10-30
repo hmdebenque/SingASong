@@ -2,7 +2,7 @@
 
 ## Context and authority
 
-SingASong is a choir-first Android Kotlin project with planned website, backend and infrastructure. The original legacy Android source/build remains at app/ and the repository root; its build has not been audited. The reboot currently has only documentation and repository checks. Read README.md, ROADMAP.md and the task-relevant documents in docs/ before changing scope or architecture.
+SingASong is a choir-first Android Kotlin project with planned website, backend and infrastructure. The Android source, Gradle build and wrapper belong under app/; use the root mise task build:app to build. Legacy build compatibility remains unaudited. The reboot currently has only documentation and repository checks. Read README.md, ROADMAP.md and the task-relevant documents in docs/ before changing scope or architecture.
 
 User instructions take precedence. Confirmed product constraints are recorded in docs/decisions/0001-product-constraints.md. Other decisions remain Proposed until maintainer agreement is recorded; creating a folder or prototype does not establish a stack choice or implemented feature.
 

@@ -7,7 +7,7 @@
 
 ## Confirmed directory constraint
 
-On 2026-10-30 the maintainer explicitly required the Android application to use `app/`. This applies to both preserved source and future reboot work. The broader conventions below remain Proposed.
+On 2026-10-30 the maintainer explicitly required the Android application to use `app/`. This applies to both preserved source and future reboot work, including all Gradle configuration and the wrapper. The maintainer also requested a root mise build task; `build:app` is the Android entry point. The broader conventions below remain Proposed.
 
 ## Proposal
 
@@ -19,4 +19,4 @@ Components can choose suitable languages and release independently while trackin
 
 ## Implementation status
 
-Documentation directories, templates and a local documentation check exist. SAS-001 preserved the original history, `app/`, root Gradle build and wrapper without migrating legacy code. No reboot application manifests, new language toolchains, cloud configuration or automated publishing have been created. Tracker setup is blocked on repository-management access; see the [integration report](../project/sas-001-integration.md). The broader repository proposal remains Proposed.
+Documentation directories, templates and a local documentation check exist. SAS-001 preserved the original history, `app/`, root Gradle build and wrapper without migrating legacy code. The subsequent maintainer-directed layout change put all Gradle files under `app/` and added the root mise task `build:app`; a build attempt is blocked by Gradle 4.4 rejecting Java 21. No reboot application manifests, new language toolchains, cloud configuration or automated publishing have been created. Tracker setup is blocked on repository-management access; see the [integration report](../project/sas-001-integration.md). The broader repository proposal remains Proposed.

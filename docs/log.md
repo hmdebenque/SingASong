@@ -1,5 +1,9 @@
 # Knowledge change log
 
+## 2026-10-30 — Android Gradle ownership and mise entry point
+
+Following explicit maintainer direction, moved the wrapper and Gradle configuration under `app/`, combined the root buildscript with the existing application module configuration, and made the Android application a single Gradle project without moving source/resources. Added root mise tasks `build:app` and `check:docs`; recorded legacy build prerequisites. Mise task validation and dry run passed; the actual task downloaded Gradle 4.4 and failed because it cannot recognize Java 21, before project evaluation. No APK was generated. This is a build-layout change, not the SAS-006 modern Android foundation or completion of SAS-007 delivery tooling.
+
 ## 2026-10-30 — Android directory confirmed
 
 The maintainer confirmed `app/` as the Android application directory for existing and future work. Moved the Android scope README there and updated ownership guidance and links. Existing Android source and Gradle build files remain unchanged. Broader repository conventions and stack choices remain Proposed.

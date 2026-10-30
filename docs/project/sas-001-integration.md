@@ -39,3 +39,9 @@ Unblock condition: use a GitHub account/connection permitted to manage labels an
 - `git diff --check` and staged equivalent: passed.
 
 No legacy Android build, device tests or reboot component tests were run: this task changes planning and repository integration only. Legacy build/upgrade viability remains unaudited under SAS-002/006. No app was published and no cloud services deployed.
+
+## Subsequent maintainer-directed build relocation
+
+After the original integration above, the maintainer required all Android build files to live under `app/` and requested a root mise task. The wrapper, wrapper distribution settings and Gradle properties were moved there. The root buildscript/repositories and application module configuration were combined into `app/build.gradle`, with `app/settings.gradle` naming a single root project. The Android plugin supplies the root clean task. Source, resources, dependencies, application ID and version configuration are unchanged. The original 95-path preservation evidence above describes the initial integration; subsequent relocation intentionally changes those build-file paths. History still retains every original version.
+
+Build-layout verification: mise task validation and dry run passed; the actual `mise run build:app` launched the moved wrapper and downloaded Gradle 4.4, then failed before project evaluation with `Could not determine java version from '21.0.12.1'`. No APK was generated. The legacy JDK/SDK compatibility work remains under SAS-006.

@@ -1,6 +1,6 @@
 # Repository ownership and interfaces
 
-The Android application belongs in `app/`, as explicitly confirmed by the maintainer on 2026-10-30. This includes future reboot work. Its existing root Gradle build/wrapper remains unchanged. The remaining layout is proposed, with component scope READMEs; add implementation folders when work starts.
+The Android application belongs in `app/`, as explicitly confirmed by the maintainer on 2026-10-30. This includes future reboot work. All Gradle configuration and the wrapper are inside `app/`; the repository root provides the mise task `build:app`. The former Android module is now the single Gradle root project, with source still in `app/src/`. The remaining layout is proposed, with component scope READMEs; add implementation folders when work starts.
 
 | Owner | Owns | Boundary |
 | --- | --- | --- |
