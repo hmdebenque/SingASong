@@ -5,7 +5,7 @@ An accepted decision is not evidence of implementation. Only explicit user/maint
 | Record | Status | Scope |
 | --- | --- | --- |
 | [0001: Product constraints](0001-product-constraints.md) | Accepted | Explicit user requirements and existing resources |
-| [0002: Repository organization](0002-repository-organization.md) | Proposed; documentation scaffold and legacy-history integration recorded | Component ownership and management conventions |
+| [0002: Repository organization](0002-repository-organization.md) | Proposed overall; Android directory `app/` explicitly confirmed | Component ownership and management conventions |
 | [0003: Backend and hosting](0003-backend-and-hosting.md) | Proposed | Firebase versus dedicated AWS service |
 
 Use the next unused four-digit number across all categories and the [template](template.md). Categories may include product, android, website, backend, infrastructure, legal, design and cross-cutting. Statuses are Proposed, Accepted, Rejected or Superseded. Link replacement decisions in both directions and retain historical reasoning. Record the maintainer agreement/date when accepting a proposal.

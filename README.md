@@ -20,7 +20,7 @@ Repository integration and the tracker-access blocker are recorded in the [SAS-0
 ## Repository ownership
 
 ```text
-apps/android/       Android application and its build/release configuration
+app/                Android application and its build/release configuration
 web/website/        Public website, support and published legal pages
 services/backend/   Backend domain, owned API contracts, persistence and resources
 infra/              Shared infrastructure modules and environment composition
@@ -29,7 +29,7 @@ scripts/            Repository-wide development and validation helpers
 .github/            Issue/PR templates; future CI and release orchestration
 ```
 
-The directories above describe the proposed reboot layout. Each component currently contains a scope README; legacy `app/` has deliberately not been migrated. Create implementation subdirectories when needed. See [ownership and interfaces](docs/architecture/repository.md) for the planned layout. An organiser web portal, if needed later, will be a separate application under `web/`; it is not part of the public website.
+The Android application belongs in `app/`, including future reboot work. The other directories describe the proposed component layout. Each component contains a scope README; the existing Android source and build files remain in place. Create implementation subdirectories when needed. See [ownership and interfaces](docs/architecture/repository.md) for the planned layout. An organiser web portal, if needed later, will be a separate application under `web/`; it is not part of the public website.
 
 ## Current validation
 

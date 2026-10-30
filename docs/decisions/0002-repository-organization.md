@@ -5,6 +5,10 @@
 - Categories: cross-cutting
 - Agreement/evidence: User requested a structure inspired by dsr-engine; detailed conventions are proposed here.
 
+## Confirmed directory constraint
+
+On 2026-10-30 the maintainer explicitly required the Android application to use `app/`. This applies to both preserved source and future reboot work. The broader conventions below remain Proposed.
+
 ## Proposal
 
 Separate Android, website and backend workspaces; keep shared environment composition under infra/. Use a single documentation index, numbered decisions, stable task IDs, evidence-based release records and component-owned contracts/resources. See [repository ownership](../architecture/repository.md) and [workflow](../project/workflow.md).

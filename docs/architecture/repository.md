@@ -1,10 +1,10 @@
 # Repository ownership and interfaces
 
-This is a proposed reboot layout, with component README files created now. The original application remains in `app/`, with its root Gradle build/wrapper unchanged; SAS-001 imports history without migrating legacy code. Add reboot source/build folders only when implementation starts.
+The Android application belongs in `app/`, as explicitly confirmed by the maintainer on 2026-10-30. This includes future reboot work. Its existing root Gradle build/wrapper remains unchanged. The remaining layout is proposed, with component scope READMEs; add implementation folders when work starts.
 
 | Owner | Owns | Boundary |
 | --- | --- | --- |
-| apps/android | Kotlin app, Gradle wrapper, local persistence/migrations, offline media and Android release configuration | Never holds backend credentials; consumes backend contracts |
+| app | Kotlin app, Gradle wrapper, local persistence/migrations, offline media and Android release configuration | Never holds backend credentials; consumes backend contracts |
 | web/website | Public pages, support, privacy/deletion entry points, static assets and web build | No private choir portal implied; no duplicate backend business logic |
 | services/backend | Domain/API, authentication integration, authorization, metadata persistence/migrations, media access and service infrastructure | Authoritative server contracts; Android/web never access its database directly |
 | infra | Shared modules, environment composition, common DNS/identity/network resources where applicable | Provider and IaC remain undecided; compose component-owned definitions |

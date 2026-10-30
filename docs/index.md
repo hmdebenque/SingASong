@@ -12,7 +12,7 @@
 - [Decision index](decisions/README.md) and [template](decisions/template.md).
 - [Repository ownership and interfaces](architecture/repository.md).
 - [Development and validation](guides/development.md).
-- Component scopes: [Android](../apps/android/README.md), [website](../web/website/README.md), [backend](../services/backend/README.md), [infrastructure](../infra/README.md).
+- Component scopes: [Android](../app/README.md), [website](../web/website/README.md), [backend](../services/backend/README.md), [infrastructure](../infra/README.md).
 
 ## Publication and history
 

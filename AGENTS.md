@@ -8,7 +8,7 @@ User instructions take precedence. Confirmed product constraints are recorded in
 
 ## Ownership
 
-- Android code belongs in apps/android/; public website code in web/website/.
+- Android code belongs in app/; public website code in web/website/.
 - Backend-owned interfaces, migrations and resource definitions belong in services/backend/. Consumers reference the owner's contracts rather than maintaining competing copies.
 - Root infra/ composes environments and shared resources. It does not select AWS, Firebase, an IaC tool or a region by its existence.
 - docs/legal/ holds preparation/review material; published pages belong to the website. Do not describe a draft as legally approved.
