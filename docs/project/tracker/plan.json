@@ -1,6 +1,6 @@
 {
   "repository": "frenchfrie/SingASong",
-  "purpose": "Prepared import specification; not live task status",
+  "purpose": "Archived initial import proposal; not live task status. GitHub tracker management was removed from SAS-001 scope; do not apply without a new maintainer request.",
   "excluded_legacy_issues": [
     1,
     2

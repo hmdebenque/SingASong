@@ -2,7 +2,7 @@
 
 ## Milestones and sources of truth
 
-The [roadmap](../../ROADMAP.md) owns scope and detailed gates. The [backlog](backlog.md) owns task state until GitHub issues are created. Decision records own agreements; release records own delivery evidence.
+The [roadmap](../../ROADMAP.md) owns scope and detailed gates. The [backlog](backlog.md) owns task state and assignment. Decision records own agreements; release records own delivery evidence.
 
 | Milestone | Roadmap coverage | Outcome |
 | --- | --- | --- |
@@ -41,13 +41,11 @@ Escalate when a stated trigger occurs, such as ambiguous migration requirements,
 
 Review needs name the evidence and expertise needed, not a mandatory second agent. Human approval remains necessary for product/architecture decisions where the workflow calls for it; model capability does not confer decision authority. Reassess capability when a task is split or its scope changes.
 
-## GitHub mapping
+## Local tracking and optional GitHub mapping
 
-The original repository is connected locally. Tracker configuration is blocked: the authenticated account `hmdebenque` has pull-only repository permission, and label creation returned HTTP 404. The [local backlog](backlog.md) remains the sole task-status/assignment authority. The [tracker package](tracker/README.md) contains all 21 proposed SAS issues, six milestones, labels and the configuration procedure. No SAS issues, milestones or project board were created by this task. The two existing legacy issues are outside this work and remain untouched.
+The [backlog](backlog.md) is the sole task-status and assignment authority. On 2026-10-30 the maintainer explicitly removed GitHub tracker management from SAS-001's required scope because the existing tracker was nearly unused. Keep stable SAS IDs, milestones, priorities, dependencies and linked completion evidence locally. GitHub issue numbers and remote issue links are not required for local task completion. Existing legacy issues remain untouched and outside this work.
 
-After authorized configuration, record each real issue URL in the backlog ID column and link the tracker here. GitHub issues then become authoritative for state/assignment; remove local live status/assignment fields. Use exactly one `status:*` label on each open SAS issue and close only completed issues as Done. An optional project board mirrors those labels; it does not introduce a second status authority. Dependency bodies must link actual SAS issue URLs after creation. Never infer GitHub issue numbers from SAS IDs.
-
-Suggested project fields: Status, Component, Milestone, Priority, Capability, Owner, Blocked by. Keep suggested model, actual provider/model/session, review needs and escalation trigger in issue bodies unless dedicated fields are useful. Suggested component labels: android, website, backend, infrastructure, design, legal, release, documentation. Use bug/feature/chore/spike for work type and add cross-cutting where relevant. Configure labels/board during SAS-001; templates do not assume labels already exist.
+The [archived tracker package](tracker/README.md) preserves the earlier import proposal. Do not apply it or maintain live task status there. GitHub access limitations are historical findings, not a project blocker. If the maintainer later requests remote tracking, reconcile the package with current tasks and explicitly agree the authority transfer before maintaining remote status; never keep two independent live status ledgers.
 
 ## Completion and release
 

@@ -1,6 +1,6 @@
 # SAS-001 integration evidence
 
-Date: 2026-10-30. Task state and assignment are maintained only in the [backlog](backlog.md). Local integration is complete; remote tracker acceptance is blocked.
+Date: 2026-10-30. Task state and assignment are maintained only in the [backlog](backlog.md). Local integration and local tracking meet the revised acceptance scope; remote tracker management is no longer required by the maintainer.
 
 ## Repository and history
 
@@ -26,7 +26,7 @@ The authorized attempt to create the `documentation` label using `POST /repos/fr
 
 Read the complete open/closed issue inventory, milestones and labels. Two open legacy issues exist; by explicit user instruction they are irrelevant to this work and remain untouched and excluded from the SAS tracker. No SAS issues or milestones existed. The [prepared tracker package](tracker/README.md) contains 21 independent SAS issue definitions, six milestone definitions, labels, dependency IDs, capability/review requirements and the exact configuration/verification procedure. No remote SAS issues, milestones, project, comments or code changes were created. No SAS issue/project links are claimed.
 
-Unblock condition: use a GitHub account/connection permitted to manage labels and milestones in the original repository, apply/reconcile the package, record actual SAS issue links and verify the single-authority transfer. Projects is an optional derived view when access permits. Until then the local backlog remains authoritative and SAS-001 must not be marked Done.
+The maintainer subsequently removed GitHub tracker management from acceptance on 2026-10-30. No remote tracker setup or authority transfer is required. The backlog retains all stable SAS IDs, milestones, dependencies and completion evidence and is the sole task-status/assignment authority. The earlier access failure is historical evidence, not an outstanding blocker. The prepared import package is archived.
 
 ## Validation
 
@@ -49,3 +49,13 @@ Build-layout verification: mise task validation and dry run passed; the actual `
 ## Subsequent mise environment setup
 
 The maintainer requested mise-managed prerequisites. The configuration now pins Temurin Java 8 for Gradle, Android SDK command-line tools 13.0, and task-scoped Temurin Java 17 for `setup:app`. Java runtimes and SDK tools installed successfully. The wrapper starts Gradle 4.4 on managed Java 8. The SDK installer reached its interactive license prompt, and a Gradle build check passed dependency resolution and stopped at missing SDK package licenses. SDK license acceptance and package installation are pending; no APK build is claimed.
+
+## Closure under revised maintainer scope
+
+On 2026-10-30 the maintainer authorized closure and stated that GitHub tracker management did not matter because it was nearly unused. Revised acceptance retains history/source preservation, deliberate planning reconciliation, stable SAS task IDs and one clear task-status authority; remote issue creation, issue links and a GitHub project are excluded.
+
+Evidence: the original 29 commits remain ancestors of the integration branch; legacy source/resources are retained; README reconciliation and later explicitly requested Gradle relocation are documented above. The local backlog contains all 21 stable SAS IDs, dependencies, milestones, capability guidance and linked completion evidence. No old issues were modified. Documentation and Git whitespace/integrity checks pass. No default-branch merge, force-push, app publication or cloud deployment occurred.
+
+The root mise environment is configured and Gradle starts on Java 8. SDK license acceptance, installation of the licensed SDK packages and APK/device verification remain Android build follow-up work under SAS-006. They do not block repository/planning integration. No APK success or product implementation is claimed by SAS-001 closure.
+
+The waiting SDK installer was stopped without accepting the license. Resume that independent setup with `mise run setup:app` when the license can be reviewed and accepted.

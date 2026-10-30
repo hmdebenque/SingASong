@@ -1,5 +1,9 @@
 # Knowledge change log
 
+## 2026-10-30 — SAS-001 closed with local tracking
+
+The maintainer authorized closure and removed GitHub tracker management from required scope. Marked SAS-001 Done with linked history/source and planning-reconciliation evidence. The local backlog remains the single status/assignment authority; archived the prepared GitHub import proposal and left legacy issues untouched. The Android layout and mise environment follow explicit maintainer direction. SDK license acceptance and APK/device verification remain SAS-006 follow-up work. No remote code push, default-branch merge, publication or deployment occurred.
+
 ## 2026-10-30 — Mise Android environment provisioning
 
 Following maintainer direction, pinned Temurin Java 8 for Gradle, Android SDK command-line tools 13.0, and a task-specific Temurin Java 17 for SDK provisioning. Added `setup:app` as a dependency of `build:app`, with idempotent SDK platform 27 / Build Tools 27.0.3 installation and post-install verification. SDK license acceptance remains interactive. Installed all pinned tools and verified Gradle 4.4 starts on the managed Java 8; SDK setup reached its license prompt. This does not complete SAS-006/007.

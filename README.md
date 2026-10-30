@@ -6,7 +6,7 @@ An Android Kotlin app for choir repertoire: find music, read comfortably, practi
 
 This checkout preserves the full history and legacy Android application from [frenchfrie/SingASong](https://github.com/frenchfrie/SingASong). Android source, Gradle configuration and wrapper live together in `app/`. Build from the repository root with `mise run build:app`; mise provisions the pinned JDKs and Android SDK packages, with interactive SDK license acceptance on first setup. Full legacy application compatibility and runtime remain unaudited. The choir reboot has planning and repository checks only: no new app foundation, website, backend or infrastructure is implemented. A Play developer account and app already exist; their configuration has not been audited.
 
-Repository integration and the tracker-access blocker are recorded in the [SAS-001 integration report](docs/project/sas-001-integration.md). The [local backlog](docs/project/backlog.md) remains the task-status authority until the SAS tracker is configured.
+Repository integration is recorded in the [SAS-001 integration report](docs/project/sas-001-integration.md). The [local backlog](docs/project/backlog.md) is the task-status authority; GitHub tracker management is not required by the maintainer.
 
 ## Start here
 
