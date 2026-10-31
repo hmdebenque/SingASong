@@ -1,23 +1,22 @@
 [tools]
-# Gradle 4.4 requires the legacy JDK. Mise exports JAVA_HOME for task commands.
-java = "temurin-8.0.504+1"
-# This plugin exports ANDROID_HOME and ANDROID_SDK_ROOT for its managed SDK.
-android-sdk = "13.0"
+# One JDK for Gradle, Kotlin and Android command-line tools.
+java = "temurin-17.0.21+9"
+# Exports ANDROID_HOME / ANDROID_SDK_ROOT for the mise-managed SDK.
+android-sdk = "19.0"
 
 [tasks."setup:app"]
-description = "Install the Android SDK platform and build tools used by the app"
-# SDK command-line tools need Java 17; this override does not affect Gradle.
-tools.java = "temurin-17.0.21+9"
+description = "Install and verify Android SDK packages (licenses require explicit acceptance)"
 raw = true
 run = '''
 set -eu
-if test -f "$ANDROID_HOME/platforms/android-27/android.jar" && test -f "$ANDROID_HOME/build-tools/27.0.3/aapt"; then
+if test -f "$ANDROID_HOME/platforms/android-36/android.jar" && test -x "$ANDROID_HOME/build-tools/36.0.0/aapt2" && test -x "$ANDROID_HOME/platform-tools/adb"; then
     exit 0
 fi
-sdkmanager --sdk_root="$ANDROID_HOME" "platforms;android-27" "build-tools;27.0.3"
-# sdkmanager can return success after licenses are declined; verify installation.
-test -f "$ANDROID_HOME/platforms/android-27/android.jar"
-test -f "$ANDROID_HOME/build-tools/27.0.3/aapt"
+sdkmanager --sdk_root="$ANDROID_HOME" "platforms;android-36" "build-tools;36.0.0" "platform-tools"
+# sdkmanager may return success after declining licenses; verify real files.
+test -f "$ANDROID_HOME/platforms/android-36/android.jar"
+test -x "$ANDROID_HOME/build-tools/36.0.0/aapt2"
+test -x "$ANDROID_HOME/platform-tools/adb"
 '''
 
 [tasks."build:app"]
@@ -25,6 +24,28 @@ description = "Build the Android debug APK"
 depends = ["setup:app"]
 dir = "{{config_root}}/app"
 run = "./gradlew --no-daemon assembleDebug"
+
+[tasks."lint:app"]
+description = "Run Android Lint for the debug app"
+depends = ["setup:app"]
+dir = "{{config_root}}/app"
+run = "./gradlew --no-daemon lintDebug"
+
+[tasks."test:app"]
+description = "Run import, PDF, playback and lifecycle tests on a connected device or emulator"
+depends = ["setup:app"]
+dir = "{{config_root}}/app"
+run = "./gradlew --no-daemon connectedDebugAndroidTest"
+
+[tasks."check:fixtures"]
+description = "Verify original PDF/audio fixture bytes and hashes"
+run = "python3 app/scripts/generate_fixtures.py --check"
+
+[tasks."check:app"]
+description = "Verify fixtures, build and lint; device tests use test:app"
+depends = ["setup:app", "check:fixtures"]
+dir = "{{config_root}}/app"
+run = "./gradlew --no-daemon assembleDebug lintDebug"
 
 [tasks."check:docs"]
 description = "Check documentation links and whitespace"

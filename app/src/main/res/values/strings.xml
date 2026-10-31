@@ -1,11 +1,36 @@
 <resources>
-    <string name="app_name">Sing a song</string>
-    <string name="title_song_detail">Song Detail</string>
-
-    <string name="hello_blank_fragment">artist</string>
-    <string name="add_song">Import</string>
-    <string name="export_song">Export</string>
-    <string name="generate_song">Generate</string>
-    <string name="export_error">Error exporting file:</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">SingASong</string>
+    <string name="library_title">Your choir repertoire</string>
+    <string name="library_empty_title">No songs yet</string>
+    <string name="library_empty_body">Choose a score and a rehearsal recording, or try an original generated demo.</string>
+    <string name="import_score">Open PDF</string>
+    <string name="replace_score">Replace PDF</string>
+    <string name="import_audio">Add recording</string>
+    <string name="replace_audio">Replace recording</string>
+    <string name="load_demo">Try generated demo</string>
+    <string name="demo_score">Generated demo · Quiet Rehearsal Study</string>
+    <string name="demo_recording">Generated demo · synthesized practice tones</string>
+    <string name="loading">Opening workspace…</string>
+    <string name="importing">Checking and saving file…</string>
+    <string name="offline_ready">Score and recording saved for offline use</string>
+    <string name="choose_score">Open a PDF score to read here.</string>
+    <string name="choose_audio">Add a recording to listen while reading.</string>
+    <string name="previous_page">Prev</string>
+    <string name="next_page">Next</string>
+    <string name="page_count">%1$d / %2$d</string>
+    <string name="score_page">Score page %1$d of %2$d</string>
+    <string name="zoom_in">Zoom 2×</string>
+    <string name="fit_width">Fit width</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="playback_time">%1$s / %2$s</string>
+    <string name="seek_recording">Recording position</string>
+    <string name="foreground_playback">Playback pauses when you leave the app. Score pages and recording time are independent.</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="import_error">Could not import this file. Choose a readable PDF (up to 20 MB, 300 pages) or supported recording (up to 64 MB). The previous file is kept.</string>
+    <string name="render_error">Could not show this PDF page. Try another page or replace the PDF.</string>
+    <string name="playback_error">Could not play this recording. Try another supported audio file.</string>
+    <string name="restore_error">Could not restore the saved workspace. Stored files have been kept.</string>
+    <string name="missing_file">A saved file is missing. Choose it again to restore offline access.</string>
+    <string name="save_error">Could not save your position. Check available storage.</string>
 </resources>

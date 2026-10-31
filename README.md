@@ -4,7 +4,7 @@ An Android Kotlin app for choir repertoire: find music, read comfortably, practi
 
 ## Project status
 
-This checkout preserves the full history and legacy Android application from [frenchfrie/SingASong](https://github.com/frenchfrie/SingASong). Android source, Gradle configuration and wrapper live together in `app/`. Build from the repository root with `mise run build:app`; mise provisions the pinned JDKs and Android SDK packages, with interactive SDK license acceptance on first setup. Full legacy application compatibility and runtime remain unaudited. The choir reboot has planning and repository checks only: no new app foundation, website, backend or infrastructure is implemented. A Play developer account and app already exist; their configuration has not been audited.
+This checkout preserves the full history of [frenchfrie/SingASong](https://github.com/frenchfrie/SingASong). SAS-022 implements a minimal Kotlin AndroidX Compose/Material 3 foundation in `app/`, including its Gradle build and wrapper. Build from the root with `mise run build:app`; see [Android setup and checks](app/README.md). SAS-006 adds a single offline PDF/recording practice workspace, with generated demo material, page navigation/zoom, playback/seek and restored positions. The full choir library and programmes are future work; website, backend and infrastructure remain unimplemented. A Play developer account/app already exists, but its configuration has not been audited.
 
 Repository integration is recorded in the [SAS-001 integration report](docs/project/sas-001-integration.md). The [local backlog](docs/project/backlog.md) is the task-status authority; GitHub tracker management is not required by the maintainer.
 
@@ -29,8 +29,12 @@ scripts/            Repository-wide development and validation helpers
 .github/            Issue/PR templates; future CI and release orchestration
 ```
 
-The Android application belongs in `app/`, including future reboot work. The other directories describe the proposed component layout. Each component contains a scope README; the existing Android source and build files remain in place. Create implementation subdirectories when needed. See [ownership and interfaces](docs/architecture/repository.md) for the planned layout. An organiser web portal, if needed later, will be a separate application under `web/`; it is not part of the public website.
+The Android application belongs in `app/`, including future reboot work. The other directories describe the proposed component layout. Each component contains a scope README; the Android foundation is implemented. Create implementation subdirectories when needed. See [ownership and interfaces](docs/architecture/repository.md) for the planned layout. An organiser web portal, if needed later, will be a separate application under `web/`; it is not part of the public website.
 
 ## Current validation
 
-Run `mise run build:app` to assemble the Android debug APK; see [Android prerequisites](app/README.md). Run `mise run check:docs` (or `python3 scripts/check_docs.py`) to check local Markdown file links and basic whitespace. The direct Python documentation check needs only Python 3 and does not install tools or contact external sites. Reboot application checks will be added with each component; legacy build verification is deferred to SAS-002/006; see the [development guide](docs/guides/development.md).
+Run `mise run check:app` to assemble the debug APK and run Android Lint. Run `mise run test:app` on a connected device/emulator for import, PDF/audio, playback and lifecycle tests. Run `mise run check:docs` (or `python3 scripts/check_docs.py`) and `git diff --check` for repository checks. The direct Python check needs only Python 3. See the [development guide](docs/guides/development.md) and [SAS-022 evidence](docs/project/sas-022-modernization.md).
+
+## Modern Android foundation
+
+The app was never published and has no users; legacy user-data migration is unnecessary. SAS-022 replaces the obsolete framework/toolchain, preserving history and application ID `com.frenchfrie.singasong`. The [report](docs/project/sas-022-modernization.md) records exact compatible pins, source disposition, SDK license/setup outcome and build/device evidence. SAS-006 now adds the [offline technical prototype](docs/project/sas-006-prototype.md); real choir corpus/pilot validation remains SAS-003. [Android architecture](docs/architecture/android.md) records the current structure and useful patterns from the maintainer-directed `venez-diner` reference.

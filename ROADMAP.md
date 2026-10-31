@@ -16,9 +16,9 @@ Success means less time finding files and more time singing. General instrument 
 
 ## Starting point
 
-The initial planning workspace was empty. SAS-001 has since imported the original repository and all 29 commits through `26e83a75533d160fa636d61895cd48d76696b1d8` (October 2019), preserving older Java code, a Kotlin activity, song/verse models, import/export code and parallel package trees in their original locations. Legacy source remains in `app/`; the proposed reboot layout is unimplemented. See the [integration report](docs/project/sas-001-integration.md). This is a structural inspection, not a build or runtime audit.
+SAS-001 imported the original repository and all 29 commits through `26e83a75533d160fa636d61895cd48d76696b1d8` (October 2019). SAS-022 now supplies a minimal modern Kotlin AndroidX Compose/Material 3 foundation under `app/`, with compatible pinned tooling, real app checks and a launchable empty choir library. Legacy song/verse models, import/export examples and duplicate package trees remain accessible in Git history; they are no longer active compilation inputs. See the [integration report](docs/project/sas-001-integration.md), [modernization evidence](docs/project/sas-022-modernization.md) and [Android architecture](docs/architecture/android.md).
 
-Recommendation: create a modern Kotlin application foundation while preserving repository history and any useful data contracts. Before replacing code, inspect actual legacy exports and determine whether anyone needs installed-app data migrated. Do not assume the legacy app already supports the proposed reader or playback features.
+The maintainer confirmed the app was never published and has no users: legacy user-data migration is out of scope. Application ID `com.frenchfrie.singasong` is retained pending the unpublished Console audit. SAS-006 adds a bounded offline PDF/recording prototype using original generated fixtures under maintainer authorization. The [prototype report](docs/project/sas-006-prototype.md) records scope and limits; SAS-003 still owns representative real choir material, workflows and device inventory. Website, backend and infrastructure are still planned.
 
 Source: [original repository](https://github.com/frenchfrie/SingASong).
 
@@ -26,7 +26,7 @@ Source: [original repository](https://github.com/frenchfrie/SingASong).
 
 - A Google Play developer account and an app already exist. Reuse the existing listing and update path where possible; registration and creating a new app are not baseline tasks.
 - An AWS account is available, and the maintainer is experienced in backend development with Java, Go and Rust. A dedicated API is therefore a realistic option alongside Firebase.
-- Play Console configuration, signing access, existing users, cloud resources and billing have not been inspected. Phase 0 audits these rather than assuming readiness.
+- Play Console configuration, signing access, prior uploads, cloud resources and billing have not been inspected. The maintainer confirmed there are no users. Phase 0 audits these rather than assuming readiness.
 
 ## Proposed MVP boundary
 
@@ -74,18 +74,18 @@ Assumptions to validate with a pilot choir:
 
 - Collect a representative pilot corpus: roughly 10–20 songs with permission to use them, scanned and digital PDFs, long scores, lyrics, tutti and individual-part recordings, and multiple arrangements of one song.
 - Observe a singer and an organiser preparing and using a real rehearsal programme.
-- Inventory legacy data and choose migration requirements and supported Android devices. Audit the existing Play app identity, signing keys/enrolment, version codes, policy status and installed-user upgrade path.
+- SAS-022 supplies the modern Android toolchain/framework independently of Console access and pilot content. Choose supported devices from pilot needs; audit the unpublished Play app identity, signing/enrolment, prior upload/version codes and policy status in SAS-002.
 - Complete the backend decision record and infrastructure baseline described below; choose local-pack versus hosted-sharing MVP scope.
 - Inventory data/SDKs, draft the privacy and content-rights approach, and define the visual identity and store asset brief.
 - Sketch Library → Song → Reader/player and Programmes → Programme → Reader flows.
-- Prototype one imported PDF with one recording on a phone and tablet. Validate readable layouts, page navigation, playback interruptions and offline reopening.
+- SAS-006 prototypes an imported PDF with a recording using generated assets on phone/tablet-sized emulators. Validate real choir material and physical pilot devices through SAS-003. Validate readable layouts, page navigation, playback interruptions and offline reopening.
 - Assess PDF renderer choices against real documents, memory use, supported Android versions and licensing. Pin dependencies only after this check.
 
-**Exit gate:** an imported song can be read and heard offline on representative devices; content formats, sharing expectations and migration needs are recorded. Existing Play signing/update feasibility is established, the backend decision is documented, and release/legal/design work has owners and deliverables.
+**Exit gate:** an imported song can be read and heard offline on representative devices; content formats, sharing expectations and the absence of legacy migration requirements are recorded. Existing Play signing/publication feasibility is established, the backend decision is documented, and release/legal/design work has owners and deliverables.
 
 ### Phase 1 — Personal choir library and dependable reader
 
-- Build the Kotlin foundation, persistent song/arrangement/resource model, file import and search.
+- Extend the SAS-022 Kotlin foundation with the persistent song/arrangement/resource model, file import and search.
 - Implement PDF and plain-lyrics reading, voice-part selection, position restoration and local backup.
 - Keep imported resources in app-managed storage so moving the source file does not silently break a song.
 - Handle duplicate imports, unsupported documents and interrupted imports explicitly.
@@ -110,7 +110,7 @@ Assumptions to validate with a pilot choir:
 - Validate archive paths, file sizes and references; stage imports so a failure leaves the existing library usable.
 - Show pack size before sharing and support saving through Android's document picker for transfer methods with larger limits.
 - Run at least two rehearsals with a small group, then a full programme rehearsal in airplane mode.
-- Complete the Play Store release gate below: signed update, tested migration, store assets, legal pages/declarations, internal/closed testing and staged production rollout. If hosted sharing is included, also pass the backend launch gate.
+- Complete the Play Store release gate below: signed first release, clean-install and pilot-update checks, store assets, legal pages/declarations, internal/closed testing and staged production rollout. If hosted sharing is included, also pass the backend launch gate.
 
 **MVP acceptance:** another singer can import the organiser's pack, select their part, read and listen to every included song offline, and traverse the programme without returning to the library. Re-importing the same pack creates no duplicates. Missing materials are visible before rehearsal. Backup restores successfully on a fresh installation. The Play release gate passes before public launch; a functional prototype alone does not constitute the MVP release.
 
@@ -208,9 +208,9 @@ Set upload/storage quotas, request limits, budget alerts and a response plan for
 
 ### P0 — Audit the existing app, during Phase 0
 
-- Confirm the existing application ID/package, listing URL, account owner/contact details, verification status, country availability, active tracks, installed audience and any policy warnings.
+- Confirm the existing application ID/package, listing URL, account owner/contact details, verification status, country availability, active tracks, any prior uploaded builds and policy warnings. The maintainer confirms no published app or users.
 - Inspect Play App Signing enrolment, signing certificate and upload-key access. Preserve the update identity, choose an increasing version code, and document recovery. An upload-key reset and a signing-key change are different operations.
-- Inspect the currently distributed build and storage schema. Decide whether users receive an in-place migration or an explicit supported export/import path, then test an actual update from that build.
+- No legacy installed-user migration is required. Establish clean-install behaviour for the reboot and preserve data across pilot/reboot updates once testers start using it.
 - Verify current target API, native-library/page-size compatibility, required declarations and any testing/production-access restrictions shown for this account. Do not assume new-personal-account requirements apply to an existing account.
 
 Sources: [Android signing guidance](https://developer.android.com/studio/publish/app-signing), [Play target API requirements](https://support.google.com/googleplay/android-developer/answer/11926878). Recheck time-sensitive requirements at submission rather than freezing a target API deadline in this roadmap.
@@ -243,7 +243,7 @@ Source: [Google Play preview asset requirements](https://support.google.com/goog
 
 - Produce the signed release artifact appropriate for the existing app, preferably an Android App Bundle with the compatible signing setup; archive mapping/native-symbol files where relevant.
 - Use internal testing for developer verification and closed testing for the pilot choir; follow any account-specific testing requirement shown in Console. Review pre-launch reports and accessibility/device failures.
-- Test install/update, existing-data migration, offline use, background audio, supported Android versions, tablet layouts and recovery after interrupted imports/downloads.
+- Test clean install, pilot-to-pilot updates and future reboot data migrations where applicable, offline use, background audio, supported Android versions, tablet layouts and recovery after interrupted imports/downloads.
 - Complete Console app-content declarations: privacy/Data safety, ads status, audience, content rating, app access and permission/foreground-service declarations as applicable. Provide reviewer credentials and access instructions if functionality is gated.
 - Check listing assets, support links and account deletion where applicable against the release candidate. Confirm cloud production configuration and backend launch gates if accounts/sharing are enabled.
 - Allow time for store review and remediation. Use controlled publishing/staged rollout, monitor crashes/ANRs and support feedback, and define stop-rollout criteria.
@@ -278,11 +278,11 @@ The maintainer owns backend/IaC/release engineering by default, with Android imp
 
 Store identity and revision separately. Do not identify songs by filename or title alone. Multiple views are linked resources, not automatically generated equivalents; plain lyrics, chord lyrics and notation may need independent authoring.
 
-## Suggested Android direction
+## Android foundation and proposed feature direction
 
-- Kotlin and Jetpack Compose with phone/tablet layouts; a small app organised by library, reader, playback and programme features.
+- Kotlin, AndroidX Compose and Material 3 are implemented in SAS-022. Current screen/theme structure and maintainer-directed `venez-diner` inspiration are recorded in [Android architecture](docs/architecture/android.md). Extend this small app by library, reader, playback and programme features as needed.
 - ViewModels and a repository/data layer, with durable local state as the basis for offline use. Start simply rather than splitting into many modules prematurely. See [Android architecture guidance](https://developer.android.com/topic/architecture).
-- Room is a proposed local metadata store; app-managed files hold PDFs/audio, and Android document/share flows handle import/export. Validate these choices during the foundation work.
+- Room is a proposed local metadata store; app-managed files hold PDFs/audio, and Android document/share flows handle import/export. Validate these choices during the feature work that needs persistence and imports.
 - Media3/ExoPlayer for ordinary recording playback; it provides the basic player abstraction and supports local/streamed media. A synchronized stem mixer remains a separate technical investigation. See [Media3 documentation](https://developer.android.com/media/media3/exoplayer).
 - Keep PDF rendering and future notation rendering behind separate interfaces. The reader should not assume that every resource has notes, measures or a musical timeline.
 - Validate import/export round trips, revision handling and persistence with automated tests; exercise reading, audio interruptions and offline use on physical devices. Include large text, accessible controls and French/English-ready UI strings.
@@ -310,8 +310,8 @@ For future structured notation, see [MusicXML's format overview](https://www.mus
 - Which sample scores/recordings represent the first choir, and are individual-part recordings already available?
 - Is manual pack sharing acceptable for the first pilot, or must members receive updates automatically?
 - Which phone/tablet models and Android versions need support? How many choir members use iOS?
-- What is the existing Play listing/package, and are signing/upload credentials available? Are there legacy exports or installed-app data that must survive the reboot?
+- What is the existing Play listing/package, and are signing/upload credentials available? No legacy installed-user migration is needed; confirm any prior Console uploads before selecting the release version code.
 - Is AWS the preferred operational home, or is reducing service maintenance with Firebase more important? What monthly pilot budget and hosting-region requirements should constrain the choice?
 - Is the first priority home practice, reading during rehearsal, or concert use? The proposed MVP supports all three, with rehearsal/practice driving the first prototype.
 
-The next implementation increment should be one real choir song imported, read and played offline. Estimate calendar effort after this slice and the sharing decision, rather than assuming that cloud collaboration or notation playback are small additions.
+The maintainer authorized SAS-006 using generated scores/recordings while real choir material is unavailable. A real choir song must still be imported, read and played offline during SAS-003/pilot validation. Estimate calendar effort after this slice and the sharing decision, rather than assuming that cloud collaboration or notation playback are small additions.

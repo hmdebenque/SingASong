@@ -1,0 +1,47 @@
+SAS-022 actual command-output excerpts, 2026-10-30–31 session.
+Complete generated reports are local build output; see the modernization report for scope and limits.
+
+Clean component build output
+BUILD SUCCESSFUL in 3s
+
+mise run check:app (clean build + lint)
+BUILD SUCCESSFUL in 16s
+46 actionable tasks: 46 executed
+
+mise run build:app
+BUILD SUCCESSFUL in 4s
+36 actionable tasks: 36 up-to-date
+
+mise run lint:app
+BUILD SUCCESSFUL in 7s
+27 actionable tasks: 1 executed, 26 up-to-date
+
+ANDROID_SERIAL=emulator-5556 mise run test:app
+Starting 2 tests on sas022-api36(AVD) - 16
+Finished 2 tests on sas022-api36(AVD) - 16
+BUILD SUCCESSFUL in 17s
+67 actionable tasks: 30 executed, 37 up-to-date
+
+ANDROID_SERIAL=emulator-5558 mise run test:app
+Starting 2 tests on sas022-api26(AVD) - 8.0.0
+Finished 2 tests on sas022-api26(AVD) - 8.0.0
+BUILD SUCCESSFUL in 13s
+67 actionable tasks: 1 executed, 66 up-to-date
+
+Android Lint report:
+No issues found.
+
+Actual API 36 display checks:
+api36-portrait (1080, 2400) library content present
+api36-landscape (2400, 1080) library content present
+api36-tablet-window (1600, 2560) library content present
+narrow 300x500 dp / font scale 1.5: body reachable by scrolling
+api36-dark (1080, 2400) library content present
+
+Final repository checks:
+python3 scripts/check_docs.py
+Checked 51 Markdown files: local file links and whitespace passed.
+git diff --check
+Exit 0; no whitespace errors.
+mise tasks validate
+All 6 task(s) validated successfully.

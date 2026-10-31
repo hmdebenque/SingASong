@@ -1,5 +1,21 @@
 # Knowledge change log
 
+## 2026-10-31 — SAS-006 offline technical prototype completed
+
+The maintainer authorized original generated score/audio fixtures while real choir material is unavailable; removed SAS-003 as a prerequisite of technical SAS-006 implementation and retained it as the real choir/pilot validation gate. Implemented one private workspace with system-picker imports, staged size/format checks, atomic metadata, isolated platform PDF rendering, page/zoom controls, foreground Media3 playback/seek and independent restored positions. Original fixture provenance/generation and bounded prototype decisions are documented.
+
+Build/lint and fixture checks passed. Nine device tests passed on each API 26/36 emulator, including import rollback, actual parser/decoder/player behavior, saved state, backgrounding and focus loss. Real document-picker import/cancellation/corrupt-file feedback, source deletion plus airplane-mode restart, phone/tablet-sized layouts, zoom, dark mode and short-window large text were exercised. Documentation and Git whitespace checks passed. Marked the technical SAS-006 scope Done with [evidence](project/sas-006-prototype.md); no real choir corpus, physical-device, audible-headset or Phase 0 completion claim is made. No app publication or deployment occurred.
+
+## 2026-10-31 — SAS-022 modern Android foundation completed
+
+Replaced the active legacy framework/build with a minimal Kotlin AndroidX Compose/Material 3 application under `app/`, retaining the original history and application ID. Pinned compatible AGP/Gradle/Kotlin/Compose/JDK/SDK configuration together, removed obsolete repositories/plugins and unused legacy dependencies, and added real root mise build/lint/device checks. Necessary SDK terms were inspected and the requested license accepted under the maintainer's explicit setup authorization. Clean build/lint and both launch/recreation tests passed on API 26 and API 36 emulators; API 36 rotation, resizing, large text and dark mode were checked. Documentation and Git whitespace checks passed. Marked SAS-022 Done with [implementation evidence](project/sas-022-modernization.md).
+
+The maintainer-directed `venez-diner` reference was inspected read-only. Adapted small Compose hosting, screen-owned layouts/insets, centralized themes and explicit dependency conventions; exact paths and future feature/design guidance are in [Android architecture](architecture/android.md). No reference branding, secrets or unrelated stack choices were adopted. Palette/template launcher and minSdk 26 remain provisional. PDF/audio stays in SAS-006; no app publication or deployment occurred.
+
+## 2026-10-30 — Unpublished app and modern Android foundation
+
+Maintainer confirmed no publication or users and requested framework/library modernization for 2026. Removed legacy installed-user migration from current planning, narrowed SAS-002 to unpublished Console configuration, and added Ready task SAS-022 for a modern foundation independently of pilot material/Console access. SAS-006 now depends on SAS-022 and pilot content. Historical SAS-001 evidence is unchanged; no build/dependency changes are claimed in this planning update.
+
 ## 2026-10-30 — SAS-001 closed with local tracking
 
 The maintainer authorized closure and removed GitHub tracker management from required scope. Marked SAS-001 Done with linked history/source and planning-reconciliation evidence. The local backlog remains the single status/assignment authority; archived the prepared GitHub import proposal and left legacy issues untouched. The Android layout and mise environment follow explicit maintainer direction. SDK license acceptance and APK/device verification remain SAS-006 follow-up work. No remote code push, default-branch merge, publication or deployment occurred.

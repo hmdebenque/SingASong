@@ -1,6 +1,6 @@
 # SAS-001 integration evidence
 
-Date: 2026-10-30. Task state and assignment are maintained only in the [backlog](backlog.md). Local integration and local tracking meet the revised acceptance scope; remote tracker management is no longer required by the maintainer.
+Date: 2026-10-30. This is historical integration evidence; subsequent SDK/build follow-up and active source replacement are recorded in the [SAS-022 modernization report](sas-022-modernization.md). Task state and assignment are maintained only in the [backlog](backlog.md). Local integration and local tracking meet the revised acceptance scope; remote tracker management is no longer required by the maintainer.
 
 ## Repository and history
 

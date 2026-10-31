@@ -2,7 +2,7 @@
 
 ## Context and authority
 
-SingASong is a choir-first Android Kotlin project with planned website, backend and infrastructure. The Android source, Gradle build and wrapper belong under app/; use the root mise task build:app to build. Legacy build compatibility remains unaudited. The reboot currently has only documentation and repository checks. Read README.md, ROADMAP.md and the task-relevant documents in docs/ before changing scope or architecture.
+SingASong is a choir-first Android Kotlin project with planned website, backend and infrastructure. The Android source, Gradle build and wrapper belong under app/; use the root mise task build:app to build. SAS-022 implements a minimal AndroidX Compose/Material 3 foundation with build, lint and real device checks; see app/README.md and docs/project/sas-022-modernization.md. The app was never published and has no users; no legacy user-data migration is needed. Original source remains in Git history. SAS-006 adds a generated-fixture offline PDF/audio workspace; real choir validation remains SAS-003. See docs/project/sas-006-prototype.md for current limits. Read README.md, ROADMAP.md and the task-relevant documents in docs/ before changing scope or architecture.
 
 User instructions take precedence. Confirmed product constraints are recorded in docs/decisions/0001-product-constraints.md. Other decisions remain Proposed until maintainer agreement is recorded; creating a folder or prototype does not establish a stack choice or implemented feature.
 
