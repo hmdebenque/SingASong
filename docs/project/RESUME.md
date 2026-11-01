@@ -1,6 +1,6 @@
-# Resume here — 2026-10-31 library checkpoint
+# Resume here — 2026-11-01 library checkpoint
 
-The maintainer stopped work to conserve model credits. No new implementation should run until resumed. Sol completed the first SAS-008 slice and is idle; the parent remains In progress, paused between slices at the maintainer's request.
+The maintainer paused work to conserve model credits. No new implementation should run until resumed. Sol completed the first SAS-008 slice and is idle; the parent remains In progress, paused between slices at the maintainer's request.
 
 ## Repository and completed work
 
@@ -21,7 +21,7 @@ SAS-002 unpublished Play configuration and SAS-003 real material/workflow collec
 
 ## Sessions and validation
 
-- Sol Codex session ID: `01a19321-f924-7780-9251-2222a82b09f0` (can resume with `codex resume` using this ID).
+- Sol Codex session ID: `01a19321-f924-7780-9251-2222a82b09f0` (completed and idle; resume only if useful).
 - Orca terminal handle at checkpoint: `term_fc7fde20-1fd1-4cf9-855b-cde8478032dc`, tab SAS-008 · Sol. Handles may change after Orca restart; re-list before sending.
 - Orca workspace: `fa47b814-1c6f-473c-bfbc-691891b009cf::/home/henri/IdeaProjects/sing-a-song/`.
 - Use the orca-cli skill for handoffs; CLI resolved here as `orca-ide`. User prefers uninterrupted local execution, with routine implementation/setup decisions made autonomously. Previous Sol launch used high reasoning, danger-full-access, approval never. Preserve boundaries around secrets, paid services and publication.

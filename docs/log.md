@@ -1,5 +1,9 @@
 # Knowledge change log
 
+## 2026-11-01 — Save library checkpoint
+
+Committed SAS-008 first library slice, test evidence, repository ownership and resume instructions as `399c819`. Created a verified local Git bundle and saved debug APK; no push or publication. SAS-008 parent remains In progress for lyrics, preferred-part behavior, backup/restore and the real choir pilot.
+
 ## 2026-10-31 — SAS-008 first library slice delivered
 
 Sol accepted full ownership and implemented SQLite-backed songs/arrangements/resources, editable song metadata, normalized search, labelled PDF/recording selection and durable resource-specific positions around the existing isolated reader/foreground player. SAS-006 conversion copies/validates files before a transactional metadata/marker commit, retains originals and supports safe retry. Imports append independent private resources; canceled/failed attempts keep committed content. No dependency/toolchain change.
