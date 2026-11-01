@@ -42,6 +42,9 @@ class WorkspaceStore(private val context: Context, private val reader: ScoreRead
         return File(directory, id)
     }
 
+    /** Read without deleting anything: SAS-008 conversion keeps the prototype intact. */
+    suspend fun loadForConversion(): Workspace = mutex.withLock { withContext(Dispatchers.IO) { read() } }
+
     suspend fun load(): Workspace = mutex.withLock {
         withContext(Dispatchers.IO) {
             val current = read()

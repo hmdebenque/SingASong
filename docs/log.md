@@ -1,5 +1,25 @@
 # Knowledge change log
 
+## 2026-10-31 — SAS-008 first library slice delivered
+
+Sol accepted full ownership and implemented SQLite-backed songs/arrangements/resources, editable song metadata, normalized search, labelled PDF/recording selection and durable resource-specific positions around the existing isolated reader/foreground player. SAS-006 conversion copies/validates files before a transactional metadata/marker commit, retains originals and supports safe retry. Imports append independent private resources; canceled/failed attempts keep committed content. No dependency/toolchain change.
+
+Build/lint/fixture checks and 19 instrumentation tests on each Pixel 7 Pro/API 36 and API 26 passed. Actual picker/cancellation, source removal plus airplane-mode force-stop/reopen, missing-file recovery, rotation, 200% text/IME and larger-window navigation were checked. See [implementation/evidence and exact remaining scope](project/sas-008-library-evidence.md). SAS-008 stays In progress for lyrics, preferred-part/filtering, backup/restore and real Phase 1 pilot acceptance; SAS-003 stays open.
+
+The current owned repository is [hmdebenque/SingASong](https://github.com/hmdebenque/SingASong); the maintainer authorized reboot restructuring/reset when useful, superseding historical preservation/pull-only constraints. [Ownership evidence](project/repository-ownership.md) records the origin and limits. No reset/push/remote tracker update or publishing occurred; active uncommitted pilot/marketing work was preserved.
+
+## 2026-10-31 — Offline library implementation authorized
+
+Maintainer approved proceeding with SAS-008 using generated fixtures and Sol implementation. Defined a bounded library slice, multi-resource state integrity and existing-prototype preservation requirements; broader lyrics/preferred-part/backup acceptance remains tracked before parent completion. Prepared a fresh Orca Sol session with uninterrupted local execution permissions.
+
+## 2026-10-31 — Pixel reference emulator
+
+Selected Pixel 7 Pro (2022) for the maintainer-requested four-year-old flagship target. Created a dedicated API 36 AVD using an already installed image; boot/install/launch and all nine generated-fixture tests passed. Added reproducible commands and retained test evidence. Real choir validation remains open.
+
+## 2026-10-31 — Resume with real choir pilot preparation
+
+Started SAS-003 intake and prepared private-corpus handling, real-device scenarios and an explicit pending-results record. Confirmed the saved APK exists and no device is attached. Real material and workflow inputs remain pending; no pilot success or additional feature implementation is claimed. Existing marketing/audio edits were left untouched.
+
 ## 2026-10-31 — SAS-006 offline technical prototype completed
 
 The maintainer authorized original generated score/audio fixtures while real choir material is unavailable; removed SAS-003 as a prerequisite of technical SAS-006 implementation and retained it as the real choir/pilot validation gate. Implemented one private workspace with system-picker imports, staged size/format checks, atomic metadata, isolated platform PDF rendering, page/zoom controls, foreground Media3 playback/seek and independent restored positions. Original fixture provenance/generation and bounded prototype decisions are documented.

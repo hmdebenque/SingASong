@@ -1,19 +1,25 @@
 # Documentation index
 
+- **[Current resume checkpoint](project/RESUME.md)**: saved state and exact next work.
+
 ## Product and delivery
 
 - [Roadmap](../ROADMAP.md): canonical product and release scope.
 - [Delivery workflow](project/workflow.md): milestones, task lifecycle and release criteria.
 - [Backlog](project/backlog.md): task IDs, priorities, dependencies and acceptance.
 - [SAS-006 reader/audio prototype](project/sas-006-prototype.md): current technical behavior, generated fixtures and validation limits.
+- [SAS-003 pilot validation](project/sas-003-pilot-validation.md): private material intake, device/workflow questions and real-content checks.
+- [SAS-008 library slice](project/sas-008-library.md) and [implementation evidence](project/sas-008-library-evidence.md): multi-song storage, search, arrangements and reader integration.
 - [Release evidence template](project/release-template.md).
 
 ## Decisions and implementation context
 
+- [Owned reboot repository](project/repository-ownership.md): current origin, restructuring authorization and preservation of active work.
 - [Decision index](decisions/README.md) and [template](decisions/template.md).
 - [Repository ownership and interfaces](architecture/repository.md).
 - [Android foundation and VenezDiner reference](architecture/android.md).
 - [Development and validation](guides/development.md).
+- [Pixel 7 Pro reference emulator](guides/pixel-emulator.md).
 - Component scopes: [Android](../app/README.md), [website](../web/website/README.md), [backend](../services/backend/README.md), [infrastructure](../infra/README.md).
 
 ## Publication and history

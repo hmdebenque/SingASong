@@ -7,3 +7,5 @@ SAS-015 covers app identity, colours/type, accessible controls, adaptive launche
 Keep editable source, export instructions and asset/licence provenance with future assets here; components own runtime copies. Record brand choices in a decision instead of treating generated assets as approval. The [roadmap](../../ROADMAP.md) P2 track defines listing deliverables; the [website](../../web/website/README.md) publishes public material.
 
 The maintainer identified `venez-diner` as design/architecture inspiration. Its read-only reference paths and adopted patterns are recorded in [Android architecture](../architecture/android.md). Use its theme/component organization as inspiration for SAS-015; SingASong’s provisional foundation palette and historical template icon are not approved branding.
+
+[Little Cloud](audio/little-cloud/README.md) preserves the original celebratory tune, WAV and synthesis source at the maintainer’s request. It is not approved app/store branding.

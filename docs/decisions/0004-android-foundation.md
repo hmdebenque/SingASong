@@ -7,7 +7,7 @@
 
 ## Decision
 
-Replace the unpublished legacy framework in the active source set. Preserve its full Git history as reference, keep Android build ownership under `app/`, and retain `com.frenchfrie.singasong` pending the SAS-002 Console audit. No legacy user-data migration is required because there are no users.
+Replace the unpublished legacy framework in the active source set. Keep Android build ownership under `app/`, and retain `com.frenchfrie.singasong` pending the SAS-002 Console audit. No legacy production user-data migration is required because there are no users. The maintainer subsequently authorized restructuring the owned reboot repository; history remains available as reference but is no longer a design constraint. See [repository ownership](../project/repository-ownership.md). Current SAS-006 prototype files and positions are preserved by SAS-008 conversion.
 
 Use AGP's built-in Kotlin, a matching Compose compiler plugin, a stable Compose library BOM and one mise-managed JDK for Gradle and SDK tools. Exact implementation pins and official compatibility sources live in the [SAS-022 report](../project/sas-022-modernization.md). Minimum API 26 is provisional until SAS-003 inventories pilot devices. Compile/target API 36 meets the currently documented phone/tablet submission floor; publication still requires a fresh policy/Console audit.
 

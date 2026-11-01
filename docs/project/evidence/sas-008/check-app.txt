@@ -1,0 +1,68 @@
+[check:fixtures] $ python3 app/scripts/generate_fixtures.py --check
+[setup:app] $ if test -f "$ANDROID_HOME/platforms/android-36/android.jar" && test -x "$ANDROID_HOME/build-tools/36.0.0/aapt2" && test -x "$ANDROID_HOME/platform-tools/adb"; then
+[check:fixtures] 7 original fixtures verified; PDF/WAV bytes reproduced deterministically.
+[check:fixtures] Finished in 4.01s
+[check:app] $ ./gradlew --no-daemon assembleDebug lintDebug
+[check:app] To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+[check:app] Daemon will be stopped at the end of the build
+[check:app] > Task :preBuild UP-TO-DATE
+[check:app] > Task :preDebugBuild UP-TO-DATE
+[check:app] > Task :mergeDebugNativeDebugMetadata NO-SOURCE
+[check:app] > Task :compileDebugAidl UP-TO-DATE
+[check:app] > Task :generateDebugResources UP-TO-DATE
+[check:app] > Task :packageDebugResources UP-TO-DATE
+[check:app] > Task :processDebugNavigationResources UP-TO-DATE
+[check:app] > Task :parseDebugLocalResources UP-TO-DATE
+[check:app] > Task :generateDebugRFile UP-TO-DATE
+[check:app] > Task :compileDebugKotlin UP-TO-DATE
+[check:app] > Task :javaPreCompileDebug UP-TO-DATE
+[check:app] > Task :compileDebugJavaWithJavac UP-TO-DATE
+[check:app] > Task :generateDebugAssets UP-TO-DATE
+[check:app] > Task :mergeDebugAssets UP-TO-DATE
+[check:app] > Task :compressDebugAssets UP-TO-DATE
+[check:app] > Task :desugarDebugFileDependencies UP-TO-DATE
+[check:app] > Task :checkDebugAarMetadata UP-TO-DATE
+[check:app] > Task :mapDebugSourceSetPaths UP-TO-DATE
+[check:app] > Task :compileDebugNavigationResources UP-TO-DATE
+[check:app] > Task :mergeDebugResources UP-TO-DATE
+[check:app] > Task :createDebugCompatibleScreenManifests UP-TO-DATE
+[check:app] > Task :extractDeepLinksDebug UP-TO-DATE
+[check:app] > Task :processDebugMainManifest UP-TO-DATE
+[check:app] > Task :processDebugManifest UP-TO-DATE
+[check:app] > Task :processDebugManifestForPackage UP-TO-DATE
+[check:app] > Task :processDebugResources UP-TO-DATE
+[check:app] > Task :dexBuilderDebug UP-TO-DATE
+[check:app] > Task :mergeDebugGlobalSynthetics UP-TO-DATE
+[check:app] > Task :processDebugJavaRes UP-TO-DATE
+[check:app] > Task :mergeDebugJavaResource UP-TO-DATE
+[check:app] > Task :checkDebugDuplicateClasses UP-TO-DATE
+[check:app] > Task :mergeExtDexDebug UP-TO-DATE
+[check:app] > Task :mergeLibDexDebug UP-TO-DATE
+[check:app] > Task :mergeProjectDexDebug UP-TO-DATE
+[check:app] > Task :mergeDebugJniLibFolders UP-TO-DATE
+[check:app] > Task :mergeDebugNativeLibs UP-TO-DATE
+[check:app] > Task :stripDebugDebugSymbols UP-TO-DATE
+[check:app] > Task :validateSigningDebug UP-TO-DATE
+[check:app] > Task :writeDebugAppMetadata UP-TO-DATE
+[check:app] > Task :writeDebugSigningConfigVersions UP-TO-DATE
+[check:app] > Task :packageDebug UP-TO-DATE
+[check:app] > Task :createDebugApkListingFileRedirect UP-TO-DATE
+[check:app] > Task :assembleDebug UP-TO-DATE
+[check:app] > Task :bundleDebugClassesToCompileJar UP-TO-DATE
+[check:app] > Task :preDebugAndroidTestBuild SKIPPED
+[check:app] > Task :generateDebugAndroidTestLintModel
+[check:app] > Task :extractProguardFiles UP-TO-DATE
+[check:app] > Task :generateDebugLintReportModel
+[check:app] > Task :preDebugUnitTestBuild UP-TO-DATE
+[check:app] > Task :generateDebugUnitTestLintModel
+[check:app] > Task :lintAnalyzeDebugUnitTest
+[check:app] > Task :lintAnalyzeDebugAndroidTest
+[check:app] > Task :lintAnalyzeDebug
+[check:app] > Task :lintReportDebug UP-TO-DATE
+[check:app] > Task :lintDebug
+[check:app]
+[check:app] BUILD SUCCESSFUL in 21s
+[check:app] 48 actionable tasks: 7 executed, 41 up-to-date
+[check:app] Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
+[check:app] Finished in 21.28s
+Finished in 25.30s

@@ -1,0 +1,1 @@
+Checked 62 Markdown files: local file links and whitespace passed.
