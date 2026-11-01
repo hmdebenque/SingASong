@@ -1,0 +1,553 @@
+{
+  "repository": "frenchfrie/SingASong",
+  "purpose": "Archived initial import proposal; not live task status. GitHub tracker management was removed from SAS-001 scope; do not apply without a new maintainer request.",
+  "excluded_legacy_issues": [
+    1,
+    2
+  ],
+  "milestones": [
+    {
+      "title": "M0 — Foundation decisions",
+      "description": "Phase 0, B0, P0: Real-content slice, existing-app audit and architecture/scope decisions. No calendar deadline committed.",
+      "state": "open"
+    },
+    {
+      "title": "M1 — Read and practise",
+      "description": "Phases 1–2, B1, P1–P2 preparation: Offline library/reader/audio; public website foundation; internal build. No calendar deadline committed.",
+      "state": "open"
+    },
+    {
+      "title": "M2 — Choir MVP release",
+      "description": "Phase 3, P1–P3: Packs/programmes and completed public-release gates. No calendar deadline committed.",
+      "state": "open"
+    },
+    {
+      "title": "M3 — Practice improvements",
+      "description": "Phase 4: Prioritized reader/practice improvements. No calendar deadline committed.",
+      "state": "open"
+    },
+    {
+      "title": "M4 — Hosted choir workspace",
+      "description": "Phase 5, B2–B3: Private shared repertoire and operational backend. No calendar deadline committed.",
+      "state": "open"
+    },
+    {
+      "title": "M5 — Broader music support",
+      "description": "Phase 6: Validated structured notation and instrument expansion. No calendar deadline committed.",
+      "state": "open"
+    }
+  ],
+  "labels": [
+    {
+      "name": "android",
+      "color": "0075ca",
+      "description": "Component: android"
+    },
+    {
+      "name": "website",
+      "color": "0075ca",
+      "description": "Component: website"
+    },
+    {
+      "name": "backend",
+      "color": "0075ca",
+      "description": "Component: backend"
+    },
+    {
+      "name": "infrastructure",
+      "color": "0075ca",
+      "description": "Component: infrastructure"
+    },
+    {
+      "name": "design",
+      "color": "0075ca",
+      "description": "Component: design"
+    },
+    {
+      "name": "legal",
+      "color": "0075ca",
+      "description": "Component: legal"
+    },
+    {
+      "name": "release",
+      "color": "0075ca",
+      "description": "Component: release"
+    },
+    {
+      "name": "documentation",
+      "color": "0075ca",
+      "description": "Component: documentation"
+    },
+    {
+      "name": "cross-cutting",
+      "color": "0075ca",
+      "description": "Component: cross-cutting"
+    },
+    {
+      "name": "bug",
+      "color": "5319e7",
+      "description": "Work type: bug"
+    },
+    {
+      "name": "feature",
+      "color": "5319e7",
+      "description": "Work type: feature"
+    },
+    {
+      "name": "chore",
+      "color": "5319e7",
+      "description": "Work type: chore"
+    },
+    {
+      "name": "spike",
+      "color": "5319e7",
+      "description": "Work type: spike"
+    },
+    {
+      "name": "priority:P0",
+      "color": "d93f0b",
+      "description": "Blocks milestone"
+    },
+    {
+      "name": "priority:P1",
+      "color": "d93f0b",
+      "description": "Required within milestone"
+    },
+    {
+      "name": "priority:P2",
+      "color": "d93f0b",
+      "description": "Optional or future"
+    },
+    {
+      "name": "status:backlog",
+      "color": "fbca04",
+      "description": "Task state: backlog; exactly one status label per issue"
+    },
+    {
+      "name": "status:ready",
+      "color": "fbca04",
+      "description": "Task state: ready; exactly one status label per issue"
+    },
+    {
+      "name": "status:in-progress",
+      "color": "fbca04",
+      "description": "Task state: in-progress; exactly one status label per issue"
+    },
+    {
+      "name": "status:review",
+      "color": "fbca04",
+      "description": "Task state: review; exactly one status label per issue"
+    },
+    {
+      "name": "status:blocked",
+      "color": "fbca04",
+      "description": "Task state: blocked; exactly one status label per issue"
+    },
+    {
+      "name": "status:done",
+      "color": "fbca04",
+      "description": "Task state: done; exactly one status label per issue"
+    },
+    {
+      "name": "capability:routine",
+      "color": "bfd4f2",
+      "description": "Provider-neutral capability: routine"
+    },
+    {
+      "name": "capability:standard",
+      "color": "bfd4f2",
+      "description": "Provider-neutral capability: standard"
+    },
+    {
+      "name": "capability:deep-reasoning",
+      "color": "bfd4f2",
+      "description": "Provider-neutral capability: deep-reasoning"
+    }
+  ],
+  "issues": [
+    {
+      "id": "SAS-001",
+      "title": "SAS-001: Integrate planning with original repository/history and configure tracker",
+      "labels": [
+        "documentation",
+        "chore",
+        "priority:P0",
+        "capability:standard",
+        "status:blocked"
+      ],
+      "milestone_title": "M0 — Foundation decisions",
+      "dependencies": [],
+      "body_file": "issues/SAS-001.md"
+    },
+    {
+      "id": "SAS-002",
+      "title": "SAS-002: Audit existing Play app and migration path",
+      "labels": [
+        "release",
+        "android",
+        "chore",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M0 — Foundation decisions",
+      "dependencies": [],
+      "body_file": "issues/SAS-002.md"
+    },
+    {
+      "id": "SAS-003",
+      "title": "SAS-003: Collect pilot corpus and validate choir workflows",
+      "labels": [
+        "android",
+        "cross-cutting",
+        "spike",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M0 — Foundation decisions",
+      "dependencies": [],
+      "body_file": "issues/SAS-003.md"
+    },
+    {
+      "id": "SAS-004",
+      "title": "SAS-004: Select backend, website hosting and hosted-MVP scope",
+      "labels": [
+        "backend",
+        "infrastructure",
+        "spike",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M0 — Foundation decisions",
+      "dependencies": [
+        "SAS-003"
+      ],
+      "body_file": "issues/SAS-004.md"
+    },
+    {
+      "id": "SAS-005",
+      "title": "SAS-005: Establish data inventory and legal/content requirements",
+      "labels": [
+        "legal",
+        "chore",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M0 — Foundation decisions",
+      "dependencies": [
+        "SAS-003"
+      ],
+      "body_file": "issues/SAS-005.md"
+    },
+    {
+      "id": "SAS-006",
+      "title": "SAS-006: Android build foundation and single-song reader/audio spike",
+      "labels": [
+        "android",
+        "spike",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M0 — Foundation decisions",
+      "dependencies": [
+        "SAS-001",
+        "SAS-002",
+        "SAS-003"
+      ],
+      "body_file": "issues/SAS-006.md"
+    },
+    {
+      "id": "SAS-007",
+      "title": "SAS-007: Delivery tooling, CI and environment plan",
+      "labels": [
+        "infrastructure",
+        "chore",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M1 — Read and practise",
+      "dependencies": [
+        "SAS-001",
+        "SAS-004",
+        "SAS-006"
+      ],
+      "body_file": "issues/SAS-007.md"
+    },
+    {
+      "id": "SAS-008",
+      "title": "SAS-008: Offline song library and reader",
+      "labels": [
+        "android",
+        "feature",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M1 — Read and practise",
+      "dependencies": [
+        "SAS-006"
+      ],
+      "body_file": "issues/SAS-008.md"
+    },
+    {
+      "id": "SAS-009",
+      "title": "SAS-009: Rehearsal recording playback",
+      "labels": [
+        "android",
+        "feature",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M1 — Read and practise",
+      "dependencies": [
+        "SAS-008"
+      ],
+      "body_file": "issues/SAS-009.md"
+    },
+    {
+      "id": "SAS-010",
+      "title": "SAS-010: Programmes and portable concert packs",
+      "labels": [
+        "android",
+        "cross-cutting",
+        "feature",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M2 — Choir MVP release",
+      "dependencies": [
+        "SAS-008",
+        "SAS-009",
+        "SAS-004"
+      ],
+      "body_file": "issues/SAS-010.md"
+    },
+    {
+      "id": "SAS-011",
+      "title": "SAS-011: Public website foundation and support hosting",
+      "labels": [
+        "website",
+        "feature",
+        "priority:P1",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M1 — Read and practise",
+      "dependencies": [
+        "SAS-004",
+        "SAS-005"
+      ],
+      "body_file": "issues/SAS-011.md"
+    },
+    {
+      "id": "SAS-012",
+      "title": "SAS-012: Hosted environment, identity and private storage",
+      "labels": [
+        "backend",
+        "infrastructure",
+        "feature",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M4 — Hosted choir workspace",
+      "dependencies": [
+        "SAS-004",
+        "SAS-007"
+      ],
+      "body_file": "issues/SAS-012.md"
+    },
+    {
+      "id": "SAS-013",
+      "title": "SAS-013: Choir membership, programme publication and synchronization",
+      "labels": [
+        "backend",
+        "android",
+        "feature",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M4 — Hosted choir workspace",
+      "dependencies": [
+        "SAS-012",
+        "SAS-010"
+      ],
+      "body_file": "issues/SAS-013.md"
+    },
+    {
+      "id": "SAS-014",
+      "title": "SAS-014: Account/data lifecycle and hosted-content controls",
+      "labels": [
+        "backend",
+        "website",
+        "legal",
+        "feature",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M4 — Hosted choir workspace",
+      "dependencies": [
+        "SAS-005",
+        "SAS-011",
+        "SAS-013"
+      ],
+      "body_file": "issues/SAS-014.md"
+    },
+    {
+      "id": "SAS-015",
+      "title": "SAS-015: Visual identity and store asset kit",
+      "labels": [
+        "design",
+        "website",
+        "android",
+        "feature",
+        "priority:P1",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M1 — Read and practise",
+      "dependencies": [
+        "SAS-003"
+      ],
+      "body_file": "issues/SAS-015.md"
+    },
+    {
+      "id": "SAS-016",
+      "title": "SAS-016: Publish legal pages and complete Console declarations",
+      "labels": [
+        "legal",
+        "website",
+        "release",
+        "chore",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M2 — Choir MVP release",
+      "dependencies": [
+        "SAS-005",
+        "SAS-011",
+        "SAS-015"
+      ],
+      "body_file": "issues/SAS-016.md"
+    },
+    {
+      "id": "SAS-017",
+      "title": "SAS-017: Internal/closed choir pilot and release candidate",
+      "labels": [
+        "android",
+        "release",
+        "chore",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M2 — Choir MVP release",
+      "dependencies": [
+        "SAS-002",
+        "SAS-007",
+        "SAS-010",
+        "SAS-015"
+      ],
+      "body_file": "issues/SAS-017.md"
+    },
+    {
+      "id": "SAS-018",
+      "title": "SAS-018: Store submission and controlled production rollout",
+      "labels": [
+        "release",
+        "chore",
+        "priority:P0",
+        "capability:standard",
+        "status:backlog"
+      ],
+      "milestone_title": "M2 — Choir MVP release",
+      "dependencies": [
+        "SAS-016",
+        "SAS-017"
+      ],
+      "body_file": "issues/SAS-018.md"
+    },
+    {
+      "id": "SAS-019",
+      "title": "SAS-019: Personal annotations and performance improvements",
+      "labels": [
+        "android",
+        "feature",
+        "priority:P1",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M3 — Practice improvements",
+      "dependencies": [
+        "SAS-017"
+      ],
+      "body_file": "issues/SAS-019.md"
+    },
+    {
+      "id": "SAS-020",
+      "title": "SAS-020: Hosted operations and launch verification",
+      "labels": [
+        "infrastructure",
+        "backend",
+        "chore",
+        "priority:P0",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M4 — Hosted choir workspace",
+      "dependencies": [
+        "SAS-013",
+        "SAS-014"
+      ],
+      "body_file": "issues/SAS-020.md"
+    },
+    {
+      "id": "SAS-021",
+      "title": "SAS-021: Structured notation feasibility and instrument plan",
+      "labels": [
+        "android",
+        "backend",
+        "spike",
+        "priority:P2",
+        "capability:deep-reasoning",
+        "status:backlog"
+      ],
+      "milestone_title": "M5 — Broader music support",
+      "dependencies": [
+        "SAS-017"
+      ],
+      "body_file": "issues/SAS-021.md"
+    }
+  ],
+  "optional_project": {
+    "title": "SingASong reboot",
+    "fields": [
+      "Status",
+      "Component",
+      "Milestone",
+      "Priority",
+      "Capability",
+      "Owner",
+      "Blocked by"
+    ],
+    "status_values": [
+      "Backlog",
+      "Ready",
+      "In progress",
+      "Review",
+      "Blocked",
+      "Done"
+    ],
+    "authority": "Issue status labels/state; project is a derived view"
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="19" failures="0" errors="0" skipped="0" time="18.714" timestamp="2026-10-31T18:21:41" hostname="localhost">
+  <testsuite name="com.frenchfrie.singasong.FoundationTest" tests="6" failures="0" errors="0" skipped="0" time="13.8" timestamp="2026-10-31T18:21:41" hostname="localhost">
+    <properties>
+      <property name="device" value="sas022-api26(AVD) - 8.0.0" />
+      <property name="flavor" value="" />
+      <property name="project" value=":" />
+    </properties>
+    <testcase name="playbackPausesOnBackgroundAndAudioFocusLoss" classname="com.frenchfrie.singasong.FoundationTest" time="2.729" />
+    <testcase name="launcherShowsLibraryAndSurvivesRecreation" classname="com.frenchfrie.singasong.FoundationTest" time="0.303" />
+    <testcase name="switchingSongsAndResourcesPausesAndRestoresTheirOwnState" classname="com.frenchfrie.singasong.FoundationTest" time="2.588" />
+    <testcase name="selectingLabelledPdfAndRecordingRestoresResourceSpecificState" classname="com.frenchfrie.singasong.FoundationTest" time="1.587" />
+    <testcase name="songFormsValidateCancelEditAndSearchThreeSongs" classname="com.frenchfrie.singasong.FoundationTest" time="4.382" />
+    <testcase name="demoRendersPlaysSeeksAndRetainsIndependentPageAcrossRecreation" classname="com.frenchfrie.singasong.FoundationTest" time="2.211" />
+  </testsuite>
+  <testsuite name="com.frenchfrie.singasong.library.LibraryStoreTest" tests="7" failures="0" errors="0" skipped="0" time="0.758" timestamp="2026-10-31T18:21:41" hostname="localhost">
+    <properties>
+      <property name="device" value="sas022-api26(AVD) - 8.0.0" />
+      <property name="flavor" value="" />
+      <property name="project" value=":" />
+    </properties>
+    <testcase name="rejectedConversionCommitKeepsOriginalAndRetriesExactlyOnce" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.126" />
+    <testcase name="malformedLegacyAndFutureSchemaNeverResetStoredContent" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.001" />
+    <testcase name="workspaceConversionIsIdempotentAndRetainsOriginalsAndPositions" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.176" />
+    <testcase name="importFailuresAndRejectedCommitRetainEveryCommittedResource" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.151" />
+    <testcase name="multipleResourcesKeepIndependentPositionsAndPrivateCopies" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.202" />
+    <testcase name="missingLegacyFileBlocksConversionWithoutWipeAndRetryWorks" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.076" />
+    <testcase name="metadataSearchAndRelationshipsSurviveReopen" classname="com.frenchfrie.singasong.library.LibraryStoreTest" time="0.026" />
+  </testsuite>
+  <testsuite name="com.frenchfrie.singasong.practice.WorkspaceTest" tests="6" failures="0" errors="0" skipped="0" time="3.641" timestamp="2026-10-31T18:21:41" hostname="localhost">
+    <properties>
+      <property name="device" value="sas022-api26(AVD) - 8.0.0" />
+      <property name="flavor" value="" />
+      <property name="project" value=":" />
+    </properties>
+    <testcase name="importsRenderDecodeAndRestoreWithoutSourceUris" classname="com.frenchfrie.singasong.practice.WorkspaceTest" time="0.151" />
+    <testcase name="corruptAndInterruptedImportsKeepPreviousFiles" classname="com.frenchfrie.singasong.practice.WorkspaceTest" time="0.051" />
+    <testcase name="oversizeInputRejectedBeforeCommitAndNamesCannotEscape" classname="com.frenchfrie.singasong.practice.WorkspaceTest" time="0.026" />
+    <testcase name="abandonedImportIsCleanedAndStalePositionCannotAlterReplacement" classname="com.frenchfrie.singasong.practice.WorkspaceTest" time="0.051" />
+    <testcase name="scanLikeAndExtremePageDimensionsUseBoundedBitmaps" classname="com.frenchfrie.singasong.practice.WorkspaceTest" time="0.277" />
+    <testcase name="mp3DecodesAndCorruptRecordingDoesNotReplaceIt" classname="com.frenchfrie.singasong.practice.WorkspaceTest" time="3.085" />
+  </testsuite>
+</testsuites>

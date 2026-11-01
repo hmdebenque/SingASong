@@ -1,0 +1,160 @@
+%PDF-1.4
+%generated-fixture
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 20000 28000] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3112 >>
+stream
+q 33.333333333333336 0 0 33.333333333333336 0 0 cm
+1 1 1 rg 0 0 600 840 re f
+0 0 0 rg
+BT /F1 24 Tf 40 790 Td (Quiet Rehearsal Study) Tj ET
+BT /F1 12 Tf 40 765 Td (Generated test score - page 1) Tj ET
+BT /F1 10 Tf 40 745 Td (Original synthetic material. Not choir repertoire.) Tj ET
+BT /F1 12 Tf 40 688 Td (Soprano) Tj ET
+0.5 w 40 660 m 560 660 l S
+0.5 w 40 652 m 560 652 l S
+0.5 w 40 644 m 560 644 l S
+0.5 w 40 636 m 560 636 l S
+0.5 w 40 628 m 560 628 l S
+70 660 8 5 re f
+1 w 78 660 m 78 687 l S
+110 652 8 5 re f
+1 w 118 652 m 118 679 l S
+150 644 8 5 re f
+1 w 158 644 m 158 671 l S
+190 636 8 5 re f
+1 w 198 636 m 198 663 l S
+230 628 8 5 re f
+1 w 238 628 m 238 655 l S
+270 660 8 5 re f
+1 w 278 660 m 278 687 l S
+310 652 8 5 re f
+1 w 318 652 m 318 679 l S
+350 644 8 5 re f
+1 w 358 644 m 358 671 l S
+390 636 8 5 re f
+1 w 398 636 m 398 663 l S
+430 628 8 5 re f
+1 w 438 628 m 438 655 l S
+470 660 8 5 re f
+1 w 478 660 m 478 687 l S
+510 652 8 5 re f
+1 w 518 652 m 518 679 l S
+BT /F1 12 Tf 40 558 Td (Alto) Tj ET
+0.5 w 40 530 m 560 530 l S
+0.5 w 40 522 m 560 522 l S
+0.5 w 40 514 m 560 514 l S
+0.5 w 40 506 m 560 506 l S
+0.5 w 40 498 m 560 498 l S
+70 522 8 5 re f
+1 w 78 522 m 78 549 l S
+110 514 8 5 re f
+1 w 118 514 m 118 541 l S
+150 506 8 5 re f
+1 w 158 506 m 158 533 l S
+190 498 8 5 re f
+1 w 198 498 m 198 525 l S
+230 530 8 5 re f
+1 w 238 530 m 238 557 l S
+270 522 8 5 re f
+1 w 278 522 m 278 549 l S
+310 514 8 5 re f
+1 w 318 514 m 318 541 l S
+350 506 8 5 re f
+1 w 358 506 m 358 533 l S
+390 498 8 5 re f
+1 w 398 498 m 398 525 l S
+430 530 8 5 re f
+1 w 438 530 m 438 557 l S
+470 522 8 5 re f
+1 w 478 522 m 478 549 l S
+510 514 8 5 re f
+1 w 518 514 m 518 541 l S
+BT /F1 12 Tf 40 428 Td (Tenor) Tj ET
+0.5 w 40 400 m 560 400 l S
+0.5 w 40 392 m 560 392 l S
+0.5 w 40 384 m 560 384 l S
+0.5 w 40 376 m 560 376 l S
+0.5 w 40 368 m 560 368 l S
+70 384 8 5 re f
+1 w 78 384 m 78 411 l S
+110 376 8 5 re f
+1 w 118 376 m 118 403 l S
+150 368 8 5 re f
+1 w 158 368 m 158 395 l S
+190 400 8 5 re f
+1 w 198 400 m 198 427 l S
+230 392 8 5 re f
+1 w 238 392 m 238 419 l S
+270 384 8 5 re f
+1 w 278 384 m 278 411 l S
+310 376 8 5 re f
+1 w 318 376 m 318 403 l S
+350 368 8 5 re f
+1 w 358 368 m 358 395 l S
+390 400 8 5 re f
+1 w 398 400 m 398 427 l S
+430 392 8 5 re f
+1 w 438 392 m 438 419 l S
+470 384 8 5 re f
+1 w 478 384 m 478 411 l S
+510 376 8 5 re f
+1 w 518 376 m 518 403 l S
+BT /F1 12 Tf 40 298 Td (Bass) Tj ET
+0.5 w 40 270 m 560 270 l S
+0.5 w 40 262 m 560 262 l S
+0.5 w 40 254 m 560 254 l S
+0.5 w 40 246 m 560 246 l S
+0.5 w 40 238 m 560 238 l S
+70 246 8 5 re f
+1 w 78 246 m 78 273 l S
+110 238 8 5 re f
+1 w 118 238 m 118 265 l S
+150 270 8 5 re f
+1 w 158 270 m 158 297 l S
+190 262 8 5 re f
+1 w 198 262 m 198 289 l S
+230 254 8 5 re f
+1 w 238 254 m 238 281 l S
+270 246 8 5 re f
+1 w 278 246 m 278 273 l S
+310 238 8 5 re f
+1 w 318 238 m 318 265 l S
+350 270 8 5 re f
+1 w 358 270 m 358 297 l S
+390 262 8 5 re f
+1 w 398 262 m 398 289 l S
+430 254 8 5 re f
+1 w 438 254 m 438 281 l S
+470 246 8 5 re f
+1 w 478 246 m 478 273 l S
+510 238 8 5 re f
+1 w 518 238 m 518 265 l S
+BT /F1 12 Tf 40 75 Td (Practice slowly. Page and audio positions are independent.) Tj ET
+Q
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000028 00000 n 
+0000000077 00000 n 
+0000000134 00000 n 
+0000000204 00000 n 
+0000000334 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3498
+%%EOF

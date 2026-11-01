@@ -1,0 +1,9 @@
+{
+  "src/main/assets/demo/score.pdf": "b0bbb393b98c36b0cde6ff39688b7a2263843c316efa755020a518f4e6947a40",
+  "src/main/assets/demo/practice.wav": "dd1f95723c9fcd4446c281225a9eb25cf03502b28adc2f8897454d12e5f1653a",
+  "src/androidTest/assets/scan-like.pdf": "4c5b7d2c5a6eb3b545c91af563bf1f8fec5fe9df80107bfd39a2dc201abbd6f0",
+  "src/androidTest/assets/oversized.pdf": "e9c5bd185a7e1d4098de6cdb7e170adb2d38fbe6935844c864deddec7be27a85",
+  "src/androidTest/assets/corrupt.pdf": "d4684c391505a0648ba0412d8bbdca2e683f762108f3a2096baeb9d501745382",
+  "src/androidTest/assets/corrupt.wav": "3e3a3d772ef403b340324d1c8f67def94fc0f1ceea2d097630fdbd84905d5405",
+  "src/androidTest/assets/practice.mp3": "144a9c1128c34c05db44f3f2139c84f5ce11444d6f3863fe10de2feb106d29f4"
+}

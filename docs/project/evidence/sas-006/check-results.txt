@@ -1,0 +1,37 @@
+SAS-006 real validation excerpts, 2026-10-31.
+
+mise run check:app
+[check:fixtures] 7 original fixtures verified; PDF/WAV bytes reproduced deterministically.
+BUILD SUCCESSFUL in 20s
+48 actionable tasks: 12 executed, 36 up-to-date
+
+ANDROID_SERIAL=emulator-5558 mise run test:app
+Starting 9 tests on sas022-api26(AVD) - 8.0.0
+Finished 9 tests on sas022-api26(AVD) - 8.0.0
+BUILD SUCCESSFUL in 20s
+69 actionable tasks: 5 executed, 64 up-to-date
+
+ANDROID_SERIAL=emulator-5556 mise run test:app
+Starting 9 tests on sas022-api36(AVD) - 16
+Finished 9 tests on sas022-api36(AVD) - 16
+BUILD SUCCESSFUL in 22s
+69 actionable tasks: 1 executed, 68 up-to-date
+
+Actual UI/display and restart checks:
+phone-portrait (1080, 2400) real PDF and recording controls visible
+phone-landscape (2400, 1080) real PDF and recording controls visible
+tablet-window (1600, 2560) real PDF and recording controls visible
+Tablet 2x zoom and pan/scroll exercised.
+phone-dark (1080, 2400) real PDF and recording controls visible
+Force-stop/relaunch in airplane mode with original source files deleted: files, page and audio position restored; paused.
+Document-picker cancellation left the saved workspace unchanged.
+Corrupt PDF selected through the real picker: actionable error, prior workspace retained.
+300x500 dp window with 1.5 font scale: playback controls reachable through workspace scrolling.
+
+Lint report:
+No issues found.
+
+Final repository checks:
+python3 scripts/check_docs.py: 55 Markdown files passed.
+git diff --check: exit 0.
+mise tasks validate: all 7 task definitions valid.
